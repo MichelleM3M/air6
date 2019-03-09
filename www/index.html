@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Geo Api</title>
+    <base href="./">
+    <link rel="icon" href="favicon.ico" />
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src * 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src * 'unsafe-inline';" />
+      <link rel="stylesheet" href="dist/index.css" />
+</head>
+
+<body class="bg-info text-white justify-content-center">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">Weather & Pollution</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item  nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item  nav-link" href="#" id="geoNavBut">Météo</a>
+                    <a class="nav-item  nav-link" href="#" id="polNavBut">Pollution</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <h1 class="row justify-content-center">Weather & Pollution</h1>
+    <div class="row justify-content-center">
+        <div id="geoIcon"></div>
+    </div>
+    <div class="row">
+        <div class="col text-center mx-auto  rounded-circle">
+            <button class="btn btn-primary" id="geoButton" type="button">Geolocaliser</button>
+        </div>
+        <div class="spinner-grow text-primary" id="spinner" style="width: 5rem; height: 5rem;display: visible">
+                <span class="sr-only">Loading...</span>
+              </div>
+
+
+        <div class="col text-center mx-auto  rounded-circle" id="polDiv">
+            <button class="btn btn-primary" id="polButton" type="button">Pollution</button>
+        </div>
+    </div>
+
+    <section id="main">
+        <div class="row">
+            <div class="col text-center" id="geoDiv">
+           
+                <h2 class="" id="geoCoord"></h2>
+                <div class="" id="geoCoord2"></div>
+                <div class="" id="headlines"></div>
+                <div class="" id="temp"></div>
+                <div class="" id="ciel"></div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <img id="map" class="col">
+            </div>
+                    <div class="row justify-content-center">
+                        <div id="geoCooDiv"></div>
+        </div>
+        <div class="row">
+            <div class="">
+                <form id="searchCityForm" method="GET" style="display:none">
+                    Ville: <input type="text" name="ville" id="searchCityInput">
+                    <input type="submit" value="Envoyer">
+                </form>
+            </div>
+
+            <div class="col text-center" id="citiesDiv">
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <script type="text/javascript" src="dist/index.js"></script>
+
+
+</body>
+
+
+</html>
